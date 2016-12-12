@@ -80,6 +80,7 @@ public class DeleteConfirmationDialog extends JDialog {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
+						MTask.window.refreshTable();//Added for refreash after closure
 						dispose();
 					}
 				});
