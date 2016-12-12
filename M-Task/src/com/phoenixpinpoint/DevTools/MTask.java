@@ -58,7 +58,7 @@ public class MTask {
 	//Declare table to view tasks
 	JTable taskTable;
 	
-	String columnTitles[] = {"Task ID", "Task Title","Task Project", "Task Due Date", "Task Status"};
+	String columnTitles[] = {"Task ID", "Task Title","Task Project", "Task Assinged", "Task Status"};
 	Object[][] data = null;
 
 	//Instantiate scrollpane for table scroll bars
@@ -106,8 +106,8 @@ public class MTask {
 		refreashStatusBar.setText(" Refreashing...");
 		
 		ResultSet taskQuery = null;
-		String getTask = "SELECT * FROM `MTaskTable` WHERE `TaskStatus` <> 'Closed'";
-		String getTaskCount = "SELECT COUNT(TaskId) FROM `MTaskTable` WHERE `TaskStatus` <> 'Closed';";
+		String getTask = "SELECT * FROM `tasks` WHERE `taskstatus` <> 'Closed'";
+		String getTaskCount = "SELECT COUNT(idtasks) FROM `tasks` WHERE `taskstatus` <> 'Closed';";
 		int count = 0;
 		try {
 			taskQuery = db.stmt.executeQuery(getTaskCount);
@@ -140,11 +140,11 @@ public class MTask {
 			taskQuery = db.stmt.executeQuery(getTask);
 			while(taskQuery.next())
 			{
-				data[dataXCount][dataYCount] = taskQuery.getString("TaskId");
-				data[dataXCount][dataYCount + 1] = taskQuery.getString("TaskTitle");
-				data[dataXCount][dataYCount + 2] = taskQuery.getString( "TaskProject");
-				data[dataXCount][dataYCount + 3] = taskQuery.getString("TaskDueDate");
-				data[dataXCount][dataYCount + 4] = taskQuery.getString("TaskStatus");
+				data[dataXCount][dataYCount] = taskQuery.getString("idtasks");
+				data[dataXCount][dataYCount + 1] = taskQuery.getString("taskname");
+				data[dataXCount][dataYCount + 2] = taskQuery.getString( "taskproject");
+				data[dataXCount][dataYCount + 3] = taskQuery.getString("taskassigned");
+				data[dataXCount][dataYCount + 4] = taskQuery.getString("taskstatus");
 				dataXCount++;
 			}
 		} catch (SQLException e) {

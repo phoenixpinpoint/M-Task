@@ -73,7 +73,7 @@ public class DeleteConfirmationDialog extends JDialog {
 				JButton yesButton = new JButton("Yes");
 				yesButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						String removeSQL = "DELETE FROM `MTaskTable` WHERE `MTaskTable`.`TaskId` = " + MTask.selectedData + ";";
+						String removeSQL = "DELETE FROM `tasks` WHERE `tasks`.`idtasks` = " + MTask.selectedData + ";";
 						try {
 							MTask.db.stmt.executeUpdate(removeSQL);
 						} catch (SQLException e1) {

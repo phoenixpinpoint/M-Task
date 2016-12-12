@@ -24,7 +24,7 @@ import java.sql.SQLException;
 public class SQLManager {
 	//MySQL Driver information and Database URL 
 	String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-	String DB_URL = "jdbc:mysql://127.0.0.1:3306";
+	String DB_URL = "jdbc:mysql://127.0.0.1:3306/mtask_db";
 	
 	//User Credentials for MySQL
 	String USER = "root";
