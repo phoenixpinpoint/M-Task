@@ -18,3 +18,4 @@ Contributions are more than welcome. This project is for the community. Feel fre
     b.projects
     c.tasks
   2. JRE/JDK 1.6 or newer
+  3. JDBC download and corrected on the classpath
