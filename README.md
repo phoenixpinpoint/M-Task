@@ -13,9 +13,9 @@ Contributions are more than welcome. This project is for the community. Feel fre
   3. Complete Implementation of project system. 
 
 ++Installation/Build++
-  1. MySQL Database by the name of 'MTask Task Table' is needed 
-    a.users
-    b.projects
-    c.tasks
-  2. JRE/JDK 1.6 or newer
-  3. JDBC download and corrected on the classpath
+  1. JRE/JDK 1.6 or newer
+  2. JDBC download and corrected on the classpath
+  3. Install MySQL server (recommended to install MySQL workbench as well)
+  4. Import the .sql files or Run setup.sql (setup.sql is beta only)
+  5. Set JDBC classpath
+  6. Build
