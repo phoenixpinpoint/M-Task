@@ -26,7 +26,7 @@ public class JCalendarButton extends JButton {
 	 * Create the panel.
 	 */
 	public JCalendarButton(final JTextField field) {
-		setIcon(new ImageIcon(MTask.class.getResource("/com/CenturyLink/Qwest/DataCPE/DevTools/calendar.gif")));
+		setIcon(new ImageIcon(MTask.class.getResource("/com/phoenixpinpoint/DevTools/calendar.gif")));
 		
 		addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

@@ -55,16 +55,16 @@ public class LoginDialog extends JDialog {
 		String password = passwordField.getText();
 		String dbPassword = "Null";
 		
-		password = translate.crypt(password);
+		//password = translate.crypt(password);//Need to add crypto
 		
-		String loginSQL = "SELECT daname, dapass, daboss, realname, cuid FROM `daminions-CPE` WHERE daname = '"+username+"' OR cuid = '"+username+"';";
+		String loginSQL = "SELECT username, password, realname, email FROM `users` WHERE username = '"+username+"';";
 		ResultSet loginQuery= null;
 		
 		try {
 			loginQuery = MTask.db.stmt.executeQuery(loginSQL);
 			while(loginQuery.next())
 			{
-				 dbPassword = loginQuery.getString("dapass");
+				 dbPassword = loginQuery.getString("password");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

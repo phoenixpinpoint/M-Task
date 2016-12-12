@@ -3,9 +3,8 @@ M-Task is a Java, MySQL based tool used for managing task during a programming p
 
 ++Contributions++
 Contributions are more than welcome. This project is for the community. Feel free to fork it to your own repo.
-  Style Guide:
-    1. Use camel case (thisIsAVariable)
-    2. Please do not use @Author, This a open community project. 
+  1. Use camel case (thisIsAVariable)
+  2. Please do not use @Author, This a open community project. 
 
 ++Needs++
   1. Build native SeaBase hooks.
@@ -13,9 +12,9 @@ Contributions are more than welcome. This project is for the community. Feel fre
   3. Complete Implementation of project system. 
 
 ++Installation/Build++
-  1. MySQL Database by the name of 'MTask Task Table' is needed
-      1.users
-      2.projects
-      3.tasks
-  2. JRE/JDK 1.6 or newer
-  3. JDBC download and corrected on the classpath
+  1. JRE/JDK 1.6 or newer
+  2. JDBC download and corrected on the classpath
+  3. Install MySQL server (recommended to install MySQL workbench as well)
+  4. Import the .sql files or Run setup.sql (setup.sql is beta only)
+  5. Set JDBC classpath
+  6. Build

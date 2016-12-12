@@ -10,8 +10,8 @@ public class ProjectManager {
 	
 	public ProjectManager()
 	{
-		String getProjects = "SELECT * FROM `MTaskProjects`";
-		String getProjectCount = "SELECT COUNT(ProjectId) FROM `MTaskProjects`;";
+		String getProjects = "SELECT * FROM `projects`";
+		String getProjectCount = "SELECT COUNT(idprojects) FROM `projects`;";
 
 		ResultSet projectQuery = null;
 		int count = 0;

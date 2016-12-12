@@ -30,6 +30,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.awt.Toolkit;
 
 
@@ -64,8 +66,12 @@ public class TaskWindow extends JFrame {//Changed to JFrame from JDialog so it w
 		String submitter = createdByField.getText();
 		String priority = priorityComboBox.getSelectedItem().toString();
 		
+		SimpleDateFormat americanFormat = new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
+		Calendar cal = Calendar.getInstance();
 		
-		String saveSQL = "INSERT INTO `MTaskTable` (`TaskTitle`, `TaskDescription`, `TaskPriority`, `TaskDueDate`, `TaskProject`, `TaskStatus`, `TaskCreatedBy`) VALUE ('"+title+"',"+"'"+description+"',"+"'"+priority+"','"+dueDate+"'," + "'" + project + "'," + "'" + status + "','" + submitter + "');";
+		String dateSubmitted = americanFormat.format(cal.getTime());
+		
+		String saveSQL = "INSERT INTO `tasks` (`taskname`, `taskdescription`, `taskpriority`, `taskproject`, `taskstatus`, `tasksubmitter`, `datesubmitted`, `taskduedate`) VALUE ('"+title+"',"+"'"+description+"',"+"'"+priority+"','"+ project + "'," + "'" + status + "','" + submitter +  "','"+ dateSubmitted+"','"+ dueDate+"');";
 		
 		System.out.println(saveSQL);
 		
@@ -88,7 +94,7 @@ public class TaskWindow extends JFrame {//Changed to JFrame from JDialog so it w
 		String id = lblId.getText();
 		
 		
-		String updateSQL = "UPDATE `MTaskTable` SET `TaskTitle` = '"+title+"',`TaskPriority` = '"+priority+"', `TaskDueDate` = '" + dueDate+ "', `TaskProject` = '" + project + "', `TaskStatus` = '" + status + "', `TaskCreatedBy` = '"+ submitter+"'" + ", `TaskDescription` = '" + description + "' WHERE `TaskId` = '" + id + "';";		
+		String updateSQL = "UPDATE `tasks` SET `taskname` = '"+title+"',`taskpriority` = '"+priority+"', `taskduedate` = '" + dueDate+ "', `taskproject` = '" + project + "', `taskstatus` = '" + status + "', `tasksubmitter` = '"+ submitter+"'" + ", `tasksubmitted` = '" + description + "' WHERE `TaskId` = '" + id + "';";		
 		
 		System.out.println(updateSQL);
 		
@@ -112,25 +118,25 @@ public class TaskWindow extends JFrame {//Changed to JFrame from JDialog so it w
 		String priority = null;
 		int id = 0;
 		
-		String getSQL = "SELECT * FROM `MTaskTable` WHERE `TaskId` = '"+ selectedData + "';";
+		String getSQL = "SELECT * FROM `tasks` WHERE `idtasks` = '"+ selectedData + "';";
 		
 		try {
 			ResultSet getSet = MTask.db.stmt.executeQuery(getSQL);
 			while(getSet.next())
 			{
-				title = getSet.getString("TaskTitle");
-				description = getSet.getString("TaskDescription");
-				dueDate = getSet.getString("TaskDueDate");
-				project = getSet.getString("TaskProject");
-				status = getSet.getString("TaskStatus");
-				submitter = getSet.getString("TaskCreatedBy");
-				priority = getSet.getString("TaskPriority");
-				createdOn = getSet.getString("TaskCreatedOn");
-				createdBy = getSet.getString("TaskCreatedBy");
-				id = getSet.getInt("TaskId");
+				title = getSet.getString("taskname");
+				description = getSet.getString("taskdescription");
+				dueDate = getSet.getString("taskduedate");
+				project = getSet.getString("taskproject");
+				status = getSet.getString("taskstatus");
+				submitter = getSet.getString("tasksubmitter");
+				priority = getSet.getString("taskpriority");
+				createdOn = getSet.getString("datesubmitted");
+				createdBy = getSet.getString("tasksubmitter");
+				id = getSet.getInt("idtasks");
 				
 				
-				System.out.println(getSet.getString("TaskTitle"));
+				//System.out.println(getSet.getString("TaskTitle"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
