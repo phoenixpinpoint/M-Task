@@ -3,8 +3,8 @@ M-Task is a Java, MySQL based tool used for managing task during a programming p
 
 ++Contributions++
 Contributions are more than welcome. This project is for the community. Feel free to fork it to your own repo. Style Guide:
-    1. Use camel case (thisIsAVariable)
-    2. Please do not use @Author, This a open community project. 
+<br>1. Use camel case (thisIsAVariable)
+<br>2. Please do not use @Author, This a open community project. 
 	
 ++Needs++
 	1. Build native SeaBase hooks.
