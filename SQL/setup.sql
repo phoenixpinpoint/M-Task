@@ -15,9 +15,12 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-DROP DATABASE IF EXISTS `mtask_db`;
-CREATE SCHEMA `mtask_db`;
+USE `sys`;
 
+DROP DATABASE IF EXISTS `mtask_db`;
+CREATE DATABASE `mtask_db`;
+
+USE `mtask_db`;
 --
 -- Table structure for table `projects`
 --
