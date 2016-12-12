@@ -15,9 +15,17 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-DROP DATABASE IF EXISTS `mtask_db`;
-CREATE SCHEMA `mtask_db`;
+USE `sys`;
 
+
+
+DROP DATABASE IF EXISTS `mtask_db`;
+
+CREATE DATABASE `mtask_db`;
+
+
+
+USE `mtask_db`;
 --
 -- Table structure for table `projects`
 --
@@ -60,11 +68,13 @@ CREATE TABLE `tasks` (
   `taskdescription` varchar(45) DEFAULT NULL,
   `tasksubmitter` varchar(45) DEFAULT NULL,
   `taskassigned` varchar(45) DEFAULT NULL,
-  `datesubmitted` datetime DEFAULT NULL,
+  `datesubmitted` varchar(45) DEFAULT NULL,
   `taskproject` varchar(45) DEFAULT NULL,
   `taskstatus` varchar(45) DEFAULT NULL,
+  `taskpriority` varchar(45) DEFAULT NULL,
+  `taskduedate` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idtasks`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Table to store task for MTask';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Table to store task for MTask';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -113,4 +123,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-11 19:44:14
+-- Dump completed on 2016-12-11 21:51:31

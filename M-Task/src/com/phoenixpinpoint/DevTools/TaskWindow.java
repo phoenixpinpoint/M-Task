@@ -50,8 +50,12 @@ public class TaskWindow extends JFrame {//Changed to JFrame from JDialog so it w
 	//Declare Comboboxes
 	JComboBox statuComboBox = new JComboBox();
 	JComboBox priorityComboBox = new JComboBox();
+	
 	JLabel lblId;
+	
 	JScrollPane descriptionScrollPane;
+	
+	JTextArea noteTextArea;
 	
 	int newTicket = 0;
 	private final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
@@ -316,7 +320,7 @@ public class TaskWindow extends JFrame {//Changed to JFrame from JDialog so it w
 						lblNotes.setBounds(10, 11, 46, 14);
 						notesPanel.add(lblNotes);
 						
-						JTextArea noteTextArea = new JTextArea();
+						noteTextArea = new JTextArea();
 						noteTextArea.setBounds(10, 30, 510, 268);
 						notesPanel.add(noteTextArea);
 						noteTextArea.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
