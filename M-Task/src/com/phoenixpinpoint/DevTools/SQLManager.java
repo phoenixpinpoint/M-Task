@@ -24,11 +24,11 @@ import java.sql.SQLException;
 public class SQLManager {
 	//MySQL Driver information and Database URL 
 	String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-	String DB_URL = "jdbc:mysql://<instert DB name Here>";
+	String DB_URL = "jdbc:mysql://127.0.0.1:3306";
 	
 	//User Credentials for MySQL
-	String USER = "";
-	String PASS = "";
+	String USER = "root";
+	String PASS = "iamroot";
 	
 	//Createing NULL Connection and statement ot filled later
 	Connection conn = null;

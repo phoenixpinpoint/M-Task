@@ -174,7 +174,7 @@ public class MTask {
 	 */
 	private void initialize() {
 		MTaskWindow = new JFrame();//Create JFrame Component of Class
-		MTaskWindow.setIconImage(Toolkit.getDefaultToolkit().getImage(MTask.class.getResource("/com/phoenixpinpoint/Task.png")));
+		MTaskWindow.setIconImage(Toolkit.getDefaultToolkit().getImage(MTask.class.getResource("/com/phoenixpinpoint/DevTools/Task.png")));
 		MTaskWindow.setResizable(false);//Set Resizable to false
 		MTaskWindow.setTitle("M-Task");//Set Window Title
 		MTaskWindow.setBounds(100, 100, 1210, 822);//Set window size in x,y,w,h format
