@@ -11,6 +11,7 @@ Contributions are more than welcome. This project is for the community. Feel fre
 	2. Need new logo created preferably by artist.
 	3. Complete Implementation of project system. 
 	4. Documentation!!!
+	5. Check the issue board if you would like to know more. 
 
 ++Installation++
 	1. JRE/JDK 1.6 or newer
