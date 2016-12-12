@@ -13,9 +13,9 @@ Contributions are more than welcome. This project is for the community. Feel fre
   3. Complete Implementation of project system. 
 
 ++Installation/Build++
-  1. MySQL Database by the name of 'MTask Task Table' is needed 
-      a.users
-      b.projects
-      c.tasks
+  1. MySQL Database by the name of 'MTask Task Table' is needed\n
+      \na.users
+      \nb.projects
+      \nc.tasks
   2. JRE/JDK 1.6 or newer
   3. JDBC download and corrected on the classpath
