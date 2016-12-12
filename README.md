@@ -13,7 +13,7 @@ Contributions are more than welcome. This project is for the community. Feel fre
   3. Complete Implementation of project system. 
 
 ++Installation/Build++
-  1. MySQL Database by the name of 'MTask Task Table' is needed\n
+  1. MySQL Database by the name of 'MTask Task Table' is needed
       1.users
       2.projects
       3.tasks
